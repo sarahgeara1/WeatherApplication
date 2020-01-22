@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_fragment"
+    >
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.forecast.weatherapplication.landing.views.fragments.MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_main_fragment_to_cities_fragment"
+            app:destination="@id/cities_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_main_fragment_to_current_city_fragment"
+            app:destination="@id/cuurent_city_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cities_fragment"
+        android:name="com.forecast.weatherapplication.searchcitiesweather.views.fragments.CitiesWeatherFragment"
+        tools:layout="@layout/cities_weather_fragment"/>
+    <fragment
+        android:id="@+id/cuurent_city_fragment"
+        android:name="com.forecast.weatherapplication.currentcityforecast.views.fragments.CurrentWeatherFragment"
+        tools:layout="@layout/current_city_weather_fragment"/>
+
+
+</navigation>
